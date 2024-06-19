@@ -17,7 +17,7 @@ def get_all_barbies():
 
 def index(request):
     barbies = get_all_barbies()
-    return render(request, 'index.html', {'barbies': barbies})
+    return render(request, 'index_barbies.html', {'barbies': barbies})
 
 
 def barbies_rest(request):

@@ -8,7 +8,7 @@ class Kitty(models.Model):
     color = models.CharField(max_length=128)
 
     def __str__(self):
-        return f'{self.number} - {self.name}'
+        return f'{self.name}'
 
 
 class User(models.Model):

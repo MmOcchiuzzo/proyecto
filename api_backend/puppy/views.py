@@ -18,7 +18,7 @@ def get_all_puppies():
 
 def index(request):
     puppies = get_all_puppies()
-    return render(request, 'index.html', {'puppies': puppies})
+    return render(request, 'index_puppies.html', {'puppies': puppies})
 
 
 def puppies_rest(request):

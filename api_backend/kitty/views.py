@@ -18,7 +18,7 @@ def get_all_kitties():
 
 def index(request):
     kitties = get_all_kitties()
-    return render(request, 'index.html', {'kitties': kitties})
+    return render(request, 'index_kitties.html', {'kitties': kitties})
 
 
 def kitties_rest(request):
