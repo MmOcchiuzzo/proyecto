@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50">
+<nav class="bg-pink-500 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-white font-bold text-xl">Puppy List</h1>
+        <ul class="flex space-x-4">
+            <li><a href="#" class="text-white hover:text-pink-200">Inicio</a></li>
+            <li><a href="#" class="text-white hover:text-pink-200">Acerca de</a></li>
+            <li><a href="#" class="text-white hover:text-pink-200">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4 text-pink-800">Lista de Puppies</h1>
+    <table class="w-full border-collapse border border-pink-300">
+        <thead>
+        <tr class="bg-pink-200">
+            <th class="border border-gray-300 px-4 py-2">Nombre</th>
+            <th class="border border-gray-300 px-4 py-2">Edad</th>
+            <th class="border border-gray-300 px-4 py-2">Raza</th>
+            <th class="border border-gray-300 px-4 py-2">Vacunado</th>
+        </thead>
+        <tbody>
+        {% for kitty in kitties %}
+        <tr class="bg-white">
+            <td class="border border-gray-300 px-4 py-2">{{ puppy.name }}</td>
+            <td class="border border-gray-300 px-4 py-2">{{ puppy.age }}</td>
+            <td class="border border-gray-300 px-4 py-2">{{ puppy.breed }}</td>
+            <td class="border border-gray-300 px-4 py-2">{{ puppy.vaccinated }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
